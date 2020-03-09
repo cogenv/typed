@@ -1,6 +1,10 @@
 import { More, ToBoolean, ToNumber, ToObject } from './util';
 export type Mode = 'auto' | 'customized';
 
+declare global {
+   var cogenv: NodeJS.Process;
+}
+
 interface TypeCogenvOptions {
    mode?: Mode;
 }
@@ -58,6 +62,7 @@ export const CogenvType = (data: More, options: TypeCogenvOptions = {}) => {
    for (const [k, v] of Object.entries(data)) {
       let [key, value] = parseTyped(k, v, options.mode);
       payload[key] = value;
+      cogenv.env[key] = value;
    }
 
    return payload;
