@@ -1,0 +1,10 @@
+# Folders
+/.vscode
+/src
+/node_modules
+
+# Files
+.gitignore
+.prettierrc.js
+changelog.config.js
+tsconfig.json
