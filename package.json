@@ -15,7 +15,7 @@
    },
    "repository": {
       "type": "git",
-      "url": "git+https://github.com/yoicalsin/%40cogenv-typed.git"
+      "url": "git+https://github.com/cogenv/typed.git"
    },
    "keywords": [
       "cogenv",
@@ -26,9 +26,9 @@
    "author": "Yoni Calsin <helloyonicb@gmail.com>",
    "license": "MIT",
    "bugs": {
-      "url": "https://github.com/yoicalsin/%40cogenv-typed/issues"
+      "url": "https://github.com/cogenv/typed/issues"
    },
-   "homepage": "https://github.com/yoicalsin/%40cogenv-typed#readme",
+   "homepage": "https://github.com/cogenv/typed#readme",
    "devDependencies": {
       "@types/node": "^13.9.0",
       "nodemon": "^2.0.2",
