@@ -5,13 +5,14 @@
    "main": "dist/index.js",
    "type": "dist/index.d.ts",
    "scripts": {
-      "dev": "tsc -w",
+      "dev": "yarn prebuild & tsc -w",
       "dev:start": "nodemon node/dist.js",
-      "build": "tsc",
+      "build": "yarn prebuild & tsc",
       "build:start": "yarn build & yarn start",
       "start": "node dist/index.js",
       "demo": "node demo.js",
-      "demo:start": "nodemon demo.js"
+      "demo:start": "nodemon demo.js",
+      "prebuild": "rimraf dist"
    },
    "repository": {
       "type": "git",
