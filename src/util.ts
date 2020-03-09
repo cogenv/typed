@@ -35,7 +35,7 @@ export const ToObject = (source: any): More => {
    try {
       let data = StringToObject(source);
       if (data) {
-         source = StringToObject(source);
+         source = data;
       }
    } catch {}
    return source;
