@@ -33,7 +33,11 @@ const CogenvConfig = require('@cogenv/core');
 const CogenvTyped = require('@cogenv/typed');
 
 // To see the @cogenv/core options we recommend you to see their documentation !
-const CogenvData = CogenvConfig();
+const p = CogenvTyped(
+   CogenvConfig({
+      matchLine: 'all',
+   }),
+);
 
 CogenvTyped(CogenvData);
 ```
