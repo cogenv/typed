@@ -1,4 +1,5 @@
 export type Mode = 'auto' | 'customized';
+
 interface TypeCogenvOptions {
    mode?: Mode;
 }
@@ -8,5 +9,9 @@ const defaultOptions: TypeCogenvOptions = {
 };
 
 export const TypeCogenv = (data: More, options: TypeCogenvOptions = {}) => {
+   options = {
+      ...defaultOptions,
+      ...options,
+   };
    return data;
 };
