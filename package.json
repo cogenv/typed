@@ -4,7 +4,13 @@
    "description": "Aggregated typed for envirements vairables",
    "main": "dist/index.js",
    "scripts": {
-      "test": "echo \"Error: no test specified\" && exit 1"
+      "dev": "tsc -w",
+      "dev:start": "yarn start",
+      "build": "tsc",
+      "build:start": "yarn build & yarn start",
+      "start": "node dist/index.js",
+      "demo": "node demo.js",
+      "demo:start": "nodemon demo.js"
    },
    "repository": {
       "type": "git",
