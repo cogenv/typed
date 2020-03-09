@@ -6,7 +6,7 @@
    "type": "dist/index.d.ts",
    "scripts": {
       "dev": "tsc -w",
-      "dev:start": "yarn start",
+      "dev:start": "nodemon node/dist.js",
       "build": "tsc",
       "build:start": "yarn build & yarn start",
       "start": "node dist/index.js",
@@ -28,5 +28,11 @@
    "bugs": {
       "url": "https://github.com/yoicalsin/%40cogenv-typed/issues"
    },
-   "homepage": "https://github.com/yoicalsin/%40cogenv-typed#readme"
+   "homepage": "https://github.com/yoicalsin/%40cogenv-typed#readme",
+   "devDependencies": {
+      "@types/node": "^13.9.0",
+      "nodemon": "^2.0.2",
+      "prettier": "^1.19.1",
+      "rimraf": "^3.0.2"
+   }
 }
