@@ -1,3 +1,5 @@
+import { More } from './util';
+
 export type Mode = 'auto' | 'customized';
 
 interface TypeCogenvOptions {
