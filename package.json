@@ -1,0 +1,25 @@
+{
+   "name": "@cogenv/typed",
+   "version": "1.0.0",
+   "description": "Aggregated typed for envirements vairables",
+   "main": "dist/index.js",
+   "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+   },
+   "repository": {
+      "type": "git",
+      "url": "git+https://github.com/yoicalsin/%40cogenv-typed.git"
+   },
+   "keywords": [
+      "cogenv",
+      "dotev",
+      "evirements",
+      "cogenv-type"
+   ],
+   "author": "Yoni Calsin <helloyonicb@gmail.com>",
+   "license": "MIT",
+   "bugs": {
+      "url": "https://github.com/yoicalsin/%40cogenv-typed/issues"
+   },
+   "homepage": "https://github.com/yoicalsin/%40cogenv-typed#readme"
+}
