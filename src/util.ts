@@ -1,24 +1,9 @@
 export interface More {
    [key: string]: any;
 }
-
-export const IsNumber = (value: any): Boolean => {
-   if (typeof value === 'number') {
-      return value - value === 0;
-   }
-   if (typeof value === 'string' && value.trim() !== '') {
-      return Number.isFinite ? Number.isFinite(+value) : isFinite(+value);
-   }
-   return false;
-};
-
-export const IsObject = (value: any): Boolean => {
-   var type = typeof value;
-   return value !== null && (type === 'object' || type === 'function');
-};
-
 export const StringToObject = (source: string): More => {
    var data = source.replace(/(['"])?([a-z0-9A-Z_]+)(['"])?:/g, '"$2": ');
+   data = data.replace(/\'/gi, '"');
    return JSON.parse(data);
 };
 
@@ -49,7 +34,6 @@ export const ToNumber = (value: any): Number => {
 export const ToObject = (source: any): More => {
    try {
       let data = StringToObject(source);
-      data = IsObject(data);
       if (data) {
          source = StringToObject(source);
       }
