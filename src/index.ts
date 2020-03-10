@@ -13,7 +13,7 @@ const defaultOptions: TypeCogenvOptions = {
    mode: 'auto',
 };
 
-export const parseTyped = (
+export const ParseTyped = (
    key: string,
    source: string,
    mode: Mode = defaultOptions.mode,
@@ -60,14 +60,11 @@ export const CogenvType = (data: More, options: TypeCogenvOptions = {}) => {
    }
 
    for (const [k, v] of Object.entries(data)) {
-      let [key, value] = parseTyped(k, v, options.mode);
+      let [key, value] = ParseTyped(k, v, options.mode);
       payload[key] = value;
       cogenv.env[key] = value;
    }
 
    return payload;
 };
-
 export default CogenvType;
-
-module.exports = CogenvType;
