@@ -1,6 +1,10 @@
 export interface More {
    [key: string]: any;
 }
+export const Log = (msg: string) => {
+   console.warn('[CogEnv][Typed][Warning...] ' + msg);
+};
+
 export const StringToObject = (source: string): More => {
    var data = source.replace(/(['"])?([a-z0-9A-Z_]+)(['"])?:/g, '"$2": ');
    data = data.replace(/\'/gi, '"');
@@ -8,6 +12,9 @@ export const StringToObject = (source: string): More => {
 };
 
 export const ToBoolean = (value: any): Boolean => {
+   if (typeof value !== 'string') {
+      return value;
+   }
    switch (value.toLowerCase().trim()) {
       case 'true':
       case '0':
