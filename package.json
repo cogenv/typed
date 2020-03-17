@@ -35,5 +35,8 @@
       "nodemon": "^2.0.2",
       "prettier": "^1.19.1",
       "rimraf": "^3.0.2"
+   },
+   "dependencies": {
+      "merge-options-default": "^1.0.1"
    }
 }
