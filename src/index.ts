@@ -1,11 +1,8 @@
-import { More, ToBoolean, ToNumber, ToObject } from './util';
+import { Merge } from 'merge-options-default';
+import { Log, More, ToBoolean, ToNumber, ToObject } from './util';
 export type Mode = 'auto' | 'customized';
 
-declare global {
-   var cogenv: NodeJS.Process;
-}
-
-interface TypeCogenvOptions {
+export interface TypeCogenvOptions {
    mode?: Mode;
 }
 
@@ -48,21 +45,26 @@ export const ParseTyped = (
 };
 
 export const CogenvType = (data: More, options: TypeCogenvOptions = {}) => {
-   options = {
-      ...defaultOptions,
-      ...options,
-   };
+   options = Merge(defaultOptions, options);
 
    let payload: More = {};
 
    if (data.parsed) {
       data = data.parsed;
    }
+   if (!data._types) {
+      Log(
+         'Activa la opcion de `matchLine` en `all` al instanciar la function "Config()" de `@cogenv/core` ',
+      );
+   }
+
+   let { _types, ...r } = data;
+
+   data = { ...r, ..._types };
 
    for (const [k, v] of Object.entries(data)) {
       let [key, value] = ParseTyped(k, v, options.mode);
       payload[key] = value;
-      cogenv.env[key] = value;
    }
 
    return payload;
