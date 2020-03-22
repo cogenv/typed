@@ -1,5 +1,5 @@
 import { Merge } from 'merge-options-default';
-import { Log, More, ToBoolean, ToNumber, ToObject } from './util';
+import { More, ToBoolean, ToNumber } from './util';
 export type Mode = 'auto' | 'customized';
 
 export interface CogenvTypeOptions {
@@ -34,15 +34,10 @@ export const ParseTyped = (
          case 'number':
             value = ToNumber(source);
             break;
-         case 'object':
-         case 'array':
-            value = ToObject(source);
-            break;
       }
    } else if (mode == 'auto') {
       value = ToBoolean(source);
       value = ToNumber(value);
-      value = ToObject(value);
    }
 
    return [k, value];
