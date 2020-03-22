@@ -4,10 +4,14 @@ export type Mode = 'auto' | 'customized';
 
 export interface CogenvTypeOptions {
    mode?: Mode;
+   mergedTypes?: boolean;
+   mergedObjects?: boolean;
 }
 
 const defaultOptions: CogenvTypeOptions = {
    mode: 'auto',
+   mergedTypes: true,
+   mergedObjects: false,
 };
 
 export const ParseTyped = (
