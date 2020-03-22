@@ -2,11 +2,11 @@ import { Merge } from 'merge-options-default';
 import { Log, More, ToBoolean, ToNumber, ToObject } from './util';
 export type Mode = 'auto' | 'customized';
 
-export interface TypeCogenvOptions {
+export interface CogenvTypeOptions {
    mode?: Mode;
 }
 
-const defaultOptions: TypeCogenvOptions = {
+const defaultOptions: CogenvTypeOptions = {
    mode: 'auto',
 };
 
@@ -44,7 +44,7 @@ export const ParseTyped = (
    return [k, value];
 };
 
-export const CogenvType = (data: More, options: TypeCogenvOptions = {}) => {
+export const CogenvType = (data: More, options: CogenvTypeOptions = {}) => {
    options = Merge(defaultOptions, options);
 
    let payload: More = {};
