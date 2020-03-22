@@ -1,8 +1,8 @@
-export interface More {
+interface More {
    [key: string]: any;
 }
 
-export const ToBoolean = (value: any): Boolean => {
+const ToBoolean = (value: any): Boolean => {
    if (typeof value !== 'string') {
       return value;
    }
@@ -20,9 +20,11 @@ export const ToBoolean = (value: any): Boolean => {
    return value;
 };
 
-export const ToNumber = (value: any): Number => {
+const ToNumber = (value: any): Number => {
    if (!isNaN(parseFloat(value))) {
       value = parseFloat(value);
    }
    return value;
 };
+
+export { ToBoolean, ToNumber, More };
