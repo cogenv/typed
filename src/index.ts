@@ -62,23 +62,19 @@ export const CogenvType = (data: More, options: CogenvTypeOptions = {}) => {
 
    let payload: More = {};
 
-   if (data.parsed) {
-      data = data.parsed;
-   }
-   if (!data._types) {
-      Log(
-         'Activa la opcion de `matchLine` en `all` al instanciar la function "Config()" de `@cogenv/core` ',
-      );
-   }
+   const { mergedObjects, mergedTypes, mode } = options;
 
-   let { _types, ...r } = data;
+   let { _types, _objects, ..._data } = data;
+   _data = ParseObject(_data, mode);
+   _types = ParseObject(_types, mode);
+   _objects = ParseObject(_objects, mode);
 
-   data = { ...r, ..._types };
-
-   for (const [k, v] of Object.entries(data)) {
-      let [key, value] = ParseTyped(k, v, options.mode);
-      payload[key] = value;
-   }
+   // Pushing to payload object
+   payload = {
+      ..._data,
+      _types,
+      _objects,
+   };
 
    return payload;
 };
