@@ -19,7 +19,7 @@ export const ParseTyped = (
    source: string,
    mode: Mode = defaultOptions.mode,
 ): [string, any] => {
-   const arrKey = key.split('@');
+   const arrKey = key.split(':');
    const type = arrKey[1];
    const k = arrKey[0];
    let value: any = source;
