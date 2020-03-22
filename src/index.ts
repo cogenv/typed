@@ -48,6 +48,15 @@ export const ParseTyped = (
    return [k, value];
 };
 
+export const ParseObject = (data: More, mode: Mode = defaultOptions.mode) => {
+   let payload: More = {};
+   for (const [k, v] of Object.entries<string>(data)) {
+      const [key, value] = ParseTyped(k, v, mode);
+      payload[key] = value;
+   }
+   return payload;
+};
+
 export const CogenvType = (data: More, options: CogenvTypeOptions = {}) => {
    options = Merge(defaultOptions, options);
 
