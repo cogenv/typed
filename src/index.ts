@@ -1,8 +1,8 @@
 import { Merge } from 'merge-options-default';
 import { More, ToBoolean, ToNumber } from './util';
-export type Mode = 'auto' | 'customized';
+type Mode = 'auto' | 'customized';
 
-export interface CogenvTypeOptions {
+interface CogenvTypeOptions {
    mode?: Mode;
    mergedTypes?: boolean;
    mergedObjects?: boolean;
@@ -14,7 +14,7 @@ const defaultOptions: CogenvTypeOptions = {
    mergedObjects: false,
 };
 
-export const ParseTyped = (
+const ParseTyped = (
    key: string,
    source: string,
    mode: Mode = defaultOptions.mode,
@@ -43,7 +43,7 @@ export const ParseTyped = (
    return [k, value];
 };
 
-export const ParseObject = (data: More, mode: Mode = defaultOptions.mode) => {
+const ParseObject = (data: More, mode: Mode = defaultOptions.mode) => {
    let payload: More = {};
    for (const [k, v] of Object.entries<string>(data)) {
       const [key, value] = ParseTyped(k, v, mode);
@@ -52,7 +52,7 @@ export const ParseObject = (data: More, mode: Mode = defaultOptions.mode) => {
    return payload;
 };
 
-export const CogenvType = (data: More, options: CogenvTypeOptions = {}) => {
+const CogenvType = (data: More, options: CogenvTypeOptions = {}) => {
    options = Merge(defaultOptions, options);
 
    let payload: More = {};
@@ -80,4 +80,7 @@ export const CogenvType = (data: More, options: CogenvTypeOptions = {}) => {
 
    return payload;
 };
+
+export { CogenvType, ParseObject, ParseTyped, CogenvTypeOptions, Mode };
+
 export default CogenvType;
