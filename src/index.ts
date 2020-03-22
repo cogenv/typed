@@ -76,6 +76,13 @@ export const CogenvType = (data: More, options: CogenvTypeOptions = {}) => {
       _objects,
    };
 
+   if (mergedTypes) {
+      payload = Merge(payload, _types);
+   }
+   if (mergedObjects) {
+      payload = Merge(payload, _objects);
+   }
+
    return payload;
 };
 export default CogenvType;
