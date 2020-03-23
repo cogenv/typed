@@ -93,3 +93,5 @@ const CogenvType = (
 export { CogenvType, ParseObject, ParseTyped, CogenvTypeOptions, Mode };
 
 export default CogenvType;
+
+module.exports = CogenvType;
