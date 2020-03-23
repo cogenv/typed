@@ -69,9 +69,9 @@ const CogenvType = (
    const { mergedObjects, mergedTypes, mode } = options;
 
    let { _types, _objects, ..._data } = data;
-   _data = ParseObject(_data, mode);
-   _types = ParseObject(_types, mode);
-   _objects = ParseObject(_objects, mode);
+   _data = ParseObject(_data || {}, mode);
+   _types = ParseObject(_types || {}, mode);
+   _objects = ParseObject(_objects || {}, mode);
 
    // Pushing to payload object
    payload = {
