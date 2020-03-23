@@ -93,5 +93,3 @@ const CogenvType = (
 export { CogenvType, ParseObject, ParseTyped, CogenvTypeOptions, Mode };
 
 export default CogenvType;
-
-exports = CogenvType;
