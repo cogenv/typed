@@ -52,7 +52,16 @@ const ParseObject = (data: More, mode: Mode = defaultOptions.mode) => {
    return payload;
 };
 
-const CogenvType = (data: More, options: CogenvTypeOptions = {}) => {
+const CogenvType = (
+   data: More,
+   options: CogenvTypeOptions = {},
+   register: Function,
+) => {
+   register({
+      name: '@cogenv/typed',
+      version: '1.0.4',
+   });
+
    options = Merge(defaultOptions, options);
 
    let payload: More = {};
