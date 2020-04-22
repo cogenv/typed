@@ -1,6 +1,6 @@
 # @cogenv/typed
 
-Este paquete pertence al paquete principal de `cogenv`.
+This package belongs to the main package of `cogenv`.
 
 ## Installation
 
