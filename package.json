@@ -1,6 +1,6 @@
 {
    "name": "@cogenv/typed",
-   "version": "1.0.3",
+   "version": "1.0.4",
    "description": "Aggregated typed for envirements vairables",
    "main": "dist/index.js",
    "type": "dist/index.d.ts",
