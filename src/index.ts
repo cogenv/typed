@@ -1,4 +1,4 @@
-import { Merge } from 'merge-options-default';
+import { Merge } from 'merge-all-objects';
 import { More, ToBoolean, ToNumber } from './util';
 type Mode = 'auto' | 'customized';
 
