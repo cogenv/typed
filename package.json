@@ -1,6 +1,6 @@
 {
    "name": "@cogenv/typed",
-   "version": "1.0.4",
+   "version": "1.0.5",
    "description": "Aggregated typed for envirements vairables",
    "main": "dist/index.js",
    "type": "dist/index.d.ts",
@@ -37,6 +37,6 @@
       "rimraf": "^3.0.2"
    },
    "dependencies": {
-      "merge-all-objects": "^1.0.0"
+      "merge-all-objects": "^1.0.1"
    }
 }
