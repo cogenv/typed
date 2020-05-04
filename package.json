@@ -37,6 +37,6 @@
       "rimraf": "^3.0.2"
    },
    "dependencies": {
-      "merge-all-objects": "^1.0.0"
+      "merge-all-objects": "^1.0.1"
    }
 }
