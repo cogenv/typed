@@ -10,7 +10,7 @@ interface CogenvTypeOptions {
 
 const defaultOptions: CogenvTypeOptions = {
    mode: 'auto',
-   mergedTypes: true,
+   mergedTypes: false,
    mergedObjects: false,
 };
 
