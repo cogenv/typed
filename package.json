@@ -1,6 +1,6 @@
 {
    "name": "@cogenv/typed",
-   "version": "1.0.7",
+   "version": "1.0.8",
    "description": "Aggregated typed for envirements vairables",
    "main": "dist/index.js",
    "type": "dist/index.d.ts",
@@ -31,15 +31,15 @@
    },
    "homepage": "https://github.com/cogenv/typed#readme",
    "devDependencies": {
-      "@types/node": "^13.9.0",
-      "nodemon": "^2.0.2",
-      "prettier": "^1.19.1",
+      "@types/node": "^14.0.13",
+      "nodemon": "^2.0.4",
+      "prettier": "^2.0.5",
       "rimraf": "^3.0.2"
    },
    "dependencies": {
-      "merge-all-objects": "^1.0.1"
+      "merge-all-objects": "^1.0.4"
    },
    "peerDependencies": {
-      "@cogenv/core": "^1.1.1"
+      "@cogenv/core": "^1.1.3"
    }
 }
