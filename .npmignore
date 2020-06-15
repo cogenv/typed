@@ -4,6 +4,7 @@
 /node_modules
 
 # Files
+.env
 .gitignore
 .prettierrc.js
 changelog.config.js
